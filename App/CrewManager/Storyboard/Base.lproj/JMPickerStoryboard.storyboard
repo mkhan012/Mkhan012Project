@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--String Picker Alert View Controller-->
+        <scene sceneID="Zyg-Gk-Dqj">
+            <objects>
+                <viewController storyboardIdentifier="StringPickerAlertViewController" id="LTl-LD-X4n" customClass="StringPickerAlertViewController" customModule="JobMirron" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XHH-zS-NL8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0nq-QY-VIu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LTl-LD-X4n" id="e27-XV-zIQ"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u3i-S8-QTM">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LTl-LD-X4n" id="Mdj-PF-ze1"/>
+                                    <outlet property="delegate" destination="LTl-LD-X4n" id="WVB-hY-11P"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data found label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29E-RV-5OK">
+                                <rect key="frame" x="135" y="325.5" width="105" height="16"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0nq-QY-VIu" firstAttribute="leading" secondItem="fyl-yU-cSF" secondAttribute="leading" id="C8S-sz-13I"/>
+                            <constraint firstItem="29E-RV-5OK" firstAttribute="centerX" secondItem="XHH-zS-NL8" secondAttribute="centerX" id="NQ9-hA-3hQ"/>
+                            <constraint firstItem="u3i-S8-QTM" firstAttribute="top" secondItem="0nq-QY-VIu" secondAttribute="bottom" id="aZ0-oK-ls8"/>
+                            <constraint firstItem="29E-RV-5OK" firstAttribute="centerY" secondItem="XHH-zS-NL8" secondAttribute="centerY" id="eug-4B-bmI"/>
+                            <constraint firstItem="0nq-QY-VIu" firstAttribute="top" secondItem="fyl-yU-cSF" secondAttribute="top" id="lIN-IK-ikO"/>
+                            <constraint firstItem="u3i-S8-QTM" firstAttribute="trailing" secondItem="fyl-yU-cSF" secondAttribute="trailing" id="nvH-wS-RBb"/>
+                            <constraint firstItem="u3i-S8-QTM" firstAttribute="leading" secondItem="fyl-yU-cSF" secondAttribute="leading" id="qt3-28-hZ2"/>
+                            <constraint firstItem="u3i-S8-QTM" firstAttribute="bottom" secondItem="fyl-yU-cSF" secondAttribute="bottom" id="rKF-io-qCG"/>
+                            <constraint firstItem="0nq-QY-VIu" firstAttribute="trailing" secondItem="fyl-yU-cSF" secondAttribute="trailing" id="x32-Ax-apr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fyl-yU-cSF"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblNoDataFound" destination="29E-RV-5OK" id="GtC-Pi-wu5"/>
+                        <outlet property="searchbar" destination="0nq-QY-VIu" id="m5V-LP-EBk"/>
+                        <outlet property="tblList" destination="u3i-S8-QTM" id="ezx-ZB-SWe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHB-6q-GWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1409" y="-1658"/>
+        </scene>
+    </scenes>
+</document>

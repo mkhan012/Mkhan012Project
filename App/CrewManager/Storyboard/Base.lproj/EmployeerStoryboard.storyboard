@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--MyShiftsViewController-->
+        <scene sceneID="Ed8-F1-jCH">
+            <objects>
+                <viewController storyboardIdentifier="MyShiftsViewController" id="QOR-bj-rs1" userLabel="MyShiftsViewController" customClass="MyShiftsViewController" customModule="JobMirron" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="25p-p9-HkI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5xX-wL-pnx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QSi-Rq-g58">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QSi-Rq-g58" id="rMg-te-56g">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data found!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yS-iN-eUd">
+                                <rect key="frame" x="149.5" y="437.5" width="115.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3ZY-c2-pTg" firstAttribute="bottom" secondItem="5xX-wL-pnx" secondAttribute="bottom" id="1fD-ZT-nQk"/>
+                            <constraint firstItem="4yS-iN-eUd" firstAttribute="centerY" secondItem="25p-p9-HkI" secondAttribute="centerY" id="fax-k7-U9m"/>
+                            <constraint firstItem="4yS-iN-eUd" firstAttribute="centerX" secondItem="25p-p9-HkI" secondAttribute="centerX" id="fpy-en-YgF"/>
+                            <constraint firstItem="5xX-wL-pnx" firstAttribute="leading" secondItem="3ZY-c2-pTg" secondAttribute="leading" id="iMa-ej-6M9"/>
+                            <constraint firstItem="5xX-wL-pnx" firstAttribute="top" secondItem="3ZY-c2-pTg" secondAttribute="top" id="ozh-RD-0Qh"/>
+                            <constraint firstItem="5xX-wL-pnx" firstAttribute="trailing" secondItem="3ZY-c2-pTg" secondAttribute="trailing" id="qNu-gr-Xzm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3ZY-c2-pTg"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblNoFataFound" destination="4yS-iN-eUd" id="rCL-Po-vHL"/>
+                        <outlet property="tblJobs" destination="5xX-wL-pnx" id="nO8-Ma-tbg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgP-ZB-RF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-691" y="54"/>
+        </scene>
+        <!--MySheetsViewController-->
+        <scene sceneID="9Yv-O3-NEG">
+            <objects>
+                <viewController storyboardIdentifier="MySheetsViewController" id="cH9-hF-19U" userLabel="MySheetsViewController" customClass="MySheetsViewController" customModule="JobMirron" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="530-8M-fPN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mYu-Id-trT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9Hu-TZ-bUU">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Hu-TZ-bUU" id="JAR-pg-d9y">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data found!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8I0-7D-DF9">
+                                <rect key="frame" x="149.5" y="437.5" width="115.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mYu-Id-trT" firstAttribute="top" secondItem="VsE-G8-6gU" secondAttribute="top" id="EDs-h7-xNL"/>
+                            <constraint firstAttribute="bottom" secondItem="mYu-Id-trT" secondAttribute="bottom" id="Kse-Vu-POj"/>
+                            <constraint firstItem="8I0-7D-DF9" firstAttribute="centerY" secondItem="530-8M-fPN" secondAttribute="centerY" id="R2g-ZD-WUm"/>
+                            <constraint firstItem="8I0-7D-DF9" firstAttribute="centerX" secondItem="530-8M-fPN" secondAttribute="centerX" id="Wi9-ja-xiW"/>
+                            <constraint firstAttribute="trailing" secondItem="mYu-Id-trT" secondAttribute="trailing" id="n0K-ru-wpq"/>
+                            <constraint firstItem="mYu-Id-trT" firstAttribute="leading" secondItem="VsE-G8-6gU" secondAttribute="leading" id="ycg-SR-FWE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VsE-G8-6gU"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblNoFataFound" destination="8I0-7D-DF9" id="rP5-pX-LjX"/>
+                        <outlet property="tblJobs" destination="mYu-Id-trT" id="a39-3d-XaG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ed7-qj-MU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="43" y="54"/>
+        </scene>
+        <!--JobRequestViewController-->
+        <scene sceneID="HaC-We-0ss">
+            <objects>
+                <viewController storyboardIdentifier="JobRequestViewController" id="9ar-kA-MkB" userLabel="JobRequestViewController" customClass="JobRequestViewController" customModule="JobMirron" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A8B-I8-6Gu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nmy-Cv-Nmv">
+                                <rect key="frame" x="0.0" y="52" width="414" height="32"/>
+                                <segments>
+                                    <segment title="Inbox"/>
+                                    <segment title="Sent"/>
+                                </segments>
+                                <connections>
+                                    <action selector="messageTypeSegmentClicked:" destination="9ar-kA-MkB" eventType="valueChanged" id="WZp-nz-UL0"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Ug-In-bf6">
+                                <rect key="frame" x="0.0" y="91" width="414" height="771"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kqu-UR-GWt">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kqu-UR-GWt" id="1Pb-Vy-7uC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data not found!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atv-K8-KMp">
+                                <rect key="frame" x="151.5" y="438.5" width="111" height="19"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cg2-eQ-REo">
+                                <rect key="frame" x="334" y="782" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Xmg-kV-HKj"/>
+                                    <constraint firstAttribute="height" constant="80" id="s7e-gE-FGh"/>
+                                </constraints>
+                                <state key="normal" image="add_new_record"/>
+                                <connections>
+                                    <action selector="sentMessageBtnClicked:" destination="9ar-kA-MkB" eventType="touchUpInside" id="Ahm-h6-zBx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Cg2-eQ-REo" firstAttribute="trailing" secondItem="2Ug-In-bf6" secondAttribute="trailing" id="0dM-EF-cA1"/>
+                            <constraint firstItem="gc4-5o-9Ff" firstAttribute="trailing" secondItem="2Ug-In-bf6" secondAttribute="trailing" id="87Q-dF-pYO"/>
+                            <constraint firstItem="atv-K8-KMp" firstAttribute="centerX" secondItem="A8B-I8-6Gu" secondAttribute="centerX" id="IjV-Z5-1ZM"/>
+                            <constraint firstItem="Cg2-eQ-REo" firstAttribute="bottom" secondItem="2Ug-In-bf6" secondAttribute="bottom" id="MX1-gM-Cmx"/>
+                            <constraint firstItem="Nmy-Cv-Nmv" firstAttribute="top" secondItem="gc4-5o-9Ff" secondAttribute="top" constant="8" id="Plv-XV-eO3"/>
+                            <constraint firstItem="Nmy-Cv-Nmv" firstAttribute="leading" secondItem="gc4-5o-9Ff" secondAttribute="leading" id="ZSL-Ze-j71"/>
+                            <constraint firstItem="gc4-5o-9Ff" firstAttribute="trailing" secondItem="Nmy-Cv-Nmv" secondAttribute="trailing" id="eDy-4h-Xjq"/>
+                            <constraint firstItem="2Ug-In-bf6" firstAttribute="top" secondItem="Nmy-Cv-Nmv" secondAttribute="bottom" constant="8" id="n1Y-RZ-Wmf"/>
+                            <constraint firstItem="gc4-5o-9Ff" firstAttribute="bottom" secondItem="2Ug-In-bf6" secondAttribute="bottom" id="o8p-D6-uZu"/>
+                            <constraint firstItem="atv-K8-KMp" firstAttribute="centerY" secondItem="A8B-I8-6Gu" secondAttribute="centerY" id="sfL-Nf-lrB"/>
+                            <constraint firstItem="2Ug-In-bf6" firstAttribute="leading" secondItem="gc4-5o-9Ff" secondAttribute="leading" id="vMn-F7-VEC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gc4-5o-9Ff"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6SX-te-OVe"/>
+                    <connections>
+                        <outlet property="btnSentMesage" destination="Cg2-eQ-REo" id="Zni-Mj-EUR"/>
+                        <outlet property="lblNoDataFoundMsg" destination="atv-K8-KMp" id="gcS-NX-C9b"/>
+                        <outlet property="segmentControl" destination="Nmy-Cv-Nmv" id="cCY-se-3cW"/>
+                        <outlet property="tblMessage" destination="2Ug-In-bf6" id="IKE-hU-irz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vh6-Eo-d7S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="54"/>
+        </scene>
+        <!--ViewJobRequestViewController-->
+        <scene sceneID="64E-hV-ZuC">
+            <objects>
+                <viewController storyboardIdentifier="ViewJobRequestViewController" id="BJV-UZ-06h" userLabel="ViewJobRequestViewController" customClass="ViewJobRequestViewController" customModule="JobMirron" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nzx-qD-XS5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfw-9S-v5U">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="J6Z-x5-E4s">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="691.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l10-Zl-Kfk">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="556.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9tw-P7-vLC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="66.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX Manger Sent you a job." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5p-3q-RCt">
+                                                                <rect key="frame" x="8" y="8" width="398" height="19"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                                <color key="textColor" red="0.5032627583" green="0.001983444206" blue="0.50052654740000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can you do this Job?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9a-Hd-dBs">
+                                                                <rect key="frame" x="8" y="42" width="398" height="16.5"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                                    </stackView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYK-l6-Yn9" customClass="JMTextField" customModule="JobMirron" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="66.5" width="414" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Job Title"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1r-IL-Ogm" customClass="JMTextField" customModule="JobMirron" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="136.5" width="414" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Job Location"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rd0-3p-emf" customClass="JMTextField" customModule="JobMirron" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="206.5" width="414" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Hours"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glm-cx-cQM" customClass="JMDatePicker" customModule="JobMirron" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="276.5" width="414" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Job Date Time"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73J-Qe-bRx" customClass="JMTextField" customModule="JobMirron" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="346.5" width="414" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Pay Rate(£)"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zc9-R7-dSe" customClass="JMTextField" customModule="JobMirron" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="416.5" width="414" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Client Name"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pv9-Yh-FT6" customClass="JMTextField" customModule="JobMirron" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="486.5" width="414" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Client Contact Number"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ugq-PF-BfE">
+                                                <rect key="frame" x="0.0" y="576.5" width="414" height="115"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L6n-Nc-AS9">
+                                                        <rect key="frame" x="15" y="8" width="384" height="42"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APJ-X8-DgA">
+                                                                <rect key="frame" x="0.0" y="0.0" width="188" height="42"/>
+                                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="42" id="IMF-i3-Kl8"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                                                <state key="normal" title="Accept">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="acceptRequestBtnClicked:" destination="BJV-UZ-06h" eventType="touchUpInside" id="axB-Z6-7kg"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gv-MP-KfH">
+                                                                <rect key="frame" x="196" y="0.0" width="188" height="42"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="42" id="hEy-JP-BBc"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                                                <state key="normal" title="Reject">
+                                                                    <color key="titleColor" red="0.5032627583" green="0.001983444206" blue="0.50052654740000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.5032627583" green="0.001983444206" blue="0.50052654740000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="rejectMessageBtnClicked:" destination="BJV-UZ-06h" eventType="touchUpInside" id="ZFo-bI-lkB"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOu-uw-pXV">
+                                                        <rect key="frame" x="15" y="65" width="384" height="42"/>
+                                                        <color key="backgroundColor" red="0.5032627583" green="0.001983444206" blue="0.50052654740000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="42" id="hvh-7J-rxm"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                                        <state key="normal" title="Send Message">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="sendMessageBtnClicked:" destination="BJV-UZ-06h" eventType="touchUpInside" id="gKi-VS-snB"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="15" bottom="8" trailing="15"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="J6Z-x5-E4s" firstAttribute="bottom" secondItem="Rpi-7P-d9c" secondAttribute="bottom" id="3KG-el-LDA"/>
+                                    <constraint firstItem="J6Z-x5-E4s" firstAttribute="centerX" secondItem="xfw-9S-v5U" secondAttribute="centerX" id="9XK-GN-6ew"/>
+                                    <constraint firstItem="J6Z-x5-E4s" firstAttribute="top" secondItem="Rpi-7P-d9c" secondAttribute="top" id="h6Q-hW-zV4"/>
+                                    <constraint firstItem="J6Z-x5-E4s" firstAttribute="leading" secondItem="Rpi-7P-d9c" secondAttribute="leading" id="oPf-yw-FQT"/>
+                                    <constraint firstItem="J6Z-x5-E4s" firstAttribute="trailing" secondItem="Rpi-7P-d9c" secondAttribute="trailing" id="v05-Sn-RSv"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Rpi-7P-d9c"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="vVu-kR-Dpf"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xfw-9S-v5U" firstAttribute="trailing" secondItem="hly-Eb-qGT" secondAttribute="trailing" id="CVW-lv-NBz"/>
+                            <constraint firstAttribute="bottom" secondItem="xfw-9S-v5U" secondAttribute="bottom" id="PNc-HR-0Z2"/>
+                            <constraint firstItem="xfw-9S-v5U" firstAttribute="leading" secondItem="hly-Eb-qGT" secondAttribute="leading" id="QDG-xq-3kM"/>
+                            <constraint firstItem="xfw-9S-v5U" firstAttribute="top" secondItem="hly-Eb-qGT" secondAttribute="top" id="ael-wY-TiH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hly-Eb-qGT"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnAccept" destination="APJ-X8-DgA" id="Fko-b2-dnD"/>
+                        <outlet property="btnReject" destination="1gv-MP-KfH" id="OCB-5g-EHq"/>
+                        <outlet property="btnSentMessage" destination="rOu-uw-pXV" id="f5l-Fa-HkB"/>
+                        <outlet property="lblMsg" destination="S9a-Hd-dBs" id="agr-al-hxs"/>
+                        <outlet property="lblSenderInfo" destination="M5p-3q-RCt" id="qmx-cx-L5B"/>
+                        <outlet property="pickerDateTime" destination="glm-cx-cQM" id="YNf-6N-rJh"/>
+                        <outlet property="txtClientContactNumber" destination="Pv9-Yh-FT6" id="hoC-6z-CzC"/>
+                        <outlet property="txtClientName" destination="Zc9-R7-dSe" id="oez-QU-FU9"/>
+                        <outlet property="txtHours" destination="Rd0-3p-emf" id="sn6-Jh-0SX"/>
+                        <outlet property="txtJobLocation" destination="Y1r-IL-Ogm" id="GLY-al-fBj"/>
+                        <outlet property="txtJobNumber" destination="AYK-l6-Yn9" id="eYo-Bh-o4F"/>
+                        <outlet property="txtPayRate" destination="73J-Qe-bRx" id="2cC-yc-Pre"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jO-Km-n0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1719" y="54"/>
+        </scene>
+        <!--MessageViewController-->
+        <scene sceneID="dH6-wo-amS">
+            <objects>
+                <viewController storyboardIdentifier="MessageViewController" id="yEr-yw-cNb" userLabel="MessageViewController" customClass="MessageViewController" customModule="JobMirron" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="46d-dB-LqD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ktM-ma-nho">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ByV-P8-P1P">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="386"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Q2v-VO-5dV">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="308"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fLA-bg-0YO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can you do this Job?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opf-0Q-B3m" customClass="JMLabel" customModule="JobMirron" customModuleProvider="target">
+                                                                <rect key="frame" x="8" y="8" width="398" height="16.5"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX Manger Sent you a job." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3D0-D0-AEm" customClass="JMLabel" customModule="JobMirron" customModuleProvider="target">
+                                                                <rect key="frame" x="8" y="39.5" width="398" height="19"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                                <color key="textColor" red="0.5032627583" green="0.001983444206" blue="0.50052654740000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can you do this Job?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHd-D9-Ex2" customClass="JMLabel" customModule="JobMirron" customModuleProvider="target">
+                                                                <rect key="frame" x="8" y="73.5" width="398" height="16.5"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                                    </stackView>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T8W-xJ-rdm" customClass="JMTextField" customModule="JobMirron" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="98" width="414" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Subject"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCompulsory" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5F-l8-08W" customClass="JMTextView" customModule="JobMirron" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="168" width="414" height="140"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Message"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4W5-7K-JuE">
+                                                <rect key="frame" x="0.0" y="328" width="414" height="58"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfE-xi-0Ok">
+                                                        <rect key="frame" x="15" y="8" width="384" height="42"/>
+                                                        <color key="backgroundColor" red="0.5032627583" green="0.001983444206" blue="0.50052654740000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="42" id="7vj-4b-SAR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                                        <state key="normal" title="Send Message">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="sendMessageBtnClicked:" destination="yEr-yw-cNb" eventType="touchUpInside" id="Uv9-Cq-xfp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="15" bottom="8" trailing="15"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ByV-P8-P1P" firstAttribute="leading" secondItem="kas-a6-5lF" secondAttribute="leading" id="7RI-72-ewo"/>
+                                    <constraint firstItem="ByV-P8-P1P" firstAttribute="bottom" secondItem="kas-a6-5lF" secondAttribute="bottom" id="EUT-IE-cla"/>
+                                    <constraint firstItem="ByV-P8-P1P" firstAttribute="centerX" secondItem="ktM-ma-nho" secondAttribute="centerX" id="RmM-aK-qVE"/>
+                                    <constraint firstItem="ByV-P8-P1P" firstAttribute="top" secondItem="kas-a6-5lF" secondAttribute="top" id="Vzx-tf-XvD"/>
+                                    <constraint firstItem="ByV-P8-P1P" firstAttribute="trailing" secondItem="kas-a6-5lF" secondAttribute="trailing" id="rQn-Mm-Osl"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="kas-a6-5lF"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="a7x-5I-DZd"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ktM-ma-nho" firstAttribute="trailing" secondItem="0Yi-WS-7Qx" secondAttribute="trailing" id="8NJ-Az-Od0"/>
+                            <constraint firstItem="ktM-ma-nho" firstAttribute="top" secondItem="0Yi-WS-7Qx" secondAttribute="top" id="AmA-bg-ojF"/>
+                            <constraint firstAttribute="bottom" secondItem="ktM-ma-nho" secondAttribute="bottom" id="C8j-rs-yZx"/>
+                            <constraint firstItem="ktM-ma-nho" firstAttribute="leading" secondItem="0Yi-WS-7Qx" secondAttribute="leading" id="xDa-eH-1Al"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Yi-WS-7Qx"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnSendMsg" destination="PfE-xi-0Ok" id="dnh-2T-SFm"/>
+                        <outlet property="lblSenderInfo" destination="3D0-D0-AEm" id="CZ6-cx-dYQ"/>
+                        <outlet property="txtMessage" destination="k5F-l8-08W" id="bkK-70-fng"/>
+                        <outlet property="txtSubject" destination="T8W-xJ-rdm" id="1hZ-8M-PD8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="An2-QR-iq2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2433" y="54"/>
+        </scene>
+        <!--MySheetsDetailViewController-->
+        <scene sceneID="3wN-41-wN0">
+            <objects>
+                <viewController storyboardIdentifier="MySheetsDetailViewController" id="Bq3-iX-iSZ" userLabel="MySheetsDetailViewController" customClass="MySheetsDetailViewController" customModule="JobMirron" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Fg-CX-R0V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XDb-WG-h4X">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BEE-N0-7rT">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BEE-N0-7rT" id="tk2-xY-eKQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data found!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edE-Mc-dac">
+                                <rect key="frame" x="149.5" y="437.5" width="115.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XDb-WG-h4X" firstAttribute="trailing" secondItem="CJj-wy-n0z" secondAttribute="trailing" id="1VU-AY-PHs"/>
+                            <constraint firstItem="CJj-wy-n0z" firstAttribute="bottom" secondItem="XDb-WG-h4X" secondAttribute="bottom" id="AYv-L6-dS4"/>
+                            <constraint firstItem="XDb-WG-h4X" firstAttribute="top" secondItem="CJj-wy-n0z" secondAttribute="top" id="GVv-fr-E6I"/>
+                            <constraint firstItem="edE-Mc-dac" firstAttribute="centerY" secondItem="3Fg-CX-R0V" secondAttribute="centerY" id="O2d-OF-WyB"/>
+                            <constraint firstItem="edE-Mc-dac" firstAttribute="centerX" secondItem="3Fg-CX-R0V" secondAttribute="centerX" id="Y4d-9G-ZsZ"/>
+                            <constraint firstItem="XDb-WG-h4X" firstAttribute="leading" secondItem="CJj-wy-n0z" secondAttribute="leading" id="iSr-4q-H6T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CJj-wy-n0z"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblDataNotFound" destination="edE-Mc-dac" id="ctN-S2-G6W"/>
+                        <outlet property="tblJobs" destination="XDb-WG-h4X" id="cCd-Ry-fiE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWL-H7-rW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-691" y="54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add_new_record" width="50" height="50"/>
+    </resources>
+</document>

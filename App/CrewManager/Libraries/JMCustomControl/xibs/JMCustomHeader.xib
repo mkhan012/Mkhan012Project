@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JMCustomHeader" customModule="JobMirron" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomBorder" destination="gqa-8X-RFE" id="15U-nf-Bhn"/>
+                <outlet property="btnPrimary" destination="KV7-6C-oM1" id="T5I-RB-yYP"/>
+                <outlet property="lblCompulsory" destination="iN3-d1-n0L" id="meb-nz-t8X"/>
+                <outlet property="lblTitle" destination="9Yn-2f-4ot" id="cAg-kS-MWH"/>
+                <outlet property="leftBorder" destination="v5r-fU-NFe" id="JPL-6U-8jv"/>
+                <outlet property="rightBorder" destination="5wy-Cv-9iR" id="MN6-0s-wh6"/>
+                <outlet property="topBorder" destination="RIj-M9-d1G" id="1mw-aU-Qt9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="85q-VL-TNi">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="22"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picker_line" translatesAutoresizingMaskIntoConstraints="NO" id="RIj-M9-d1G">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="BM4-xf-GMo">
+                    <rect key="frame" x="10" y="3.5" width="87" height="15.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEADER TITLE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yn-2f-4ot">
+                            <rect key="frame" x="0.0" y="0.5" width="79" height="14.5"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                            <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iN3-d1-n0L">
+                            <rect key="frame" x="81" y="0.0" width="6" height="15.5"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                            </variation>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WZU-48-mMT">
+                    <rect key="frame" x="330" y="0.0" width="45" height="22"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KV7-6C-oM1" customClass="JMBaseButton" customModule="JobMirron" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="22"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                            <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                            <state key="normal" image="add_icon"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                            </variation>
+                        </button>
+                    </subviews>
+                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vertical_line" translatesAutoresizingMaskIntoConstraints="NO" id="v5r-fU-NFe">
+                    <rect key="frame" x="0.0" y="0.0" width="1" height="22"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picker_line" translatesAutoresizingMaskIntoConstraints="NO" id="gqa-8X-RFE">
+                    <rect key="frame" x="0.0" y="21" width="375" height="1"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vertical_line" translatesAutoresizingMaskIntoConstraints="NO" id="5wy-Cv-9iR">
+                    <rect key="frame" x="374" y="0.0" width="1" height="22"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="v5r-fU-NFe" firstAttribute="leading" secondItem="w0A-yq-iCc" secondAttribute="leading" id="5De-ja-w4E"/>
+                <constraint firstItem="BM4-xf-GMo" firstAttribute="centerY" secondItem="85q-VL-TNi" secondAttribute="centerY" id="BEZ-St-Cd8"/>
+                <constraint firstItem="WZU-48-mMT" firstAttribute="trailing" secondItem="w0A-yq-iCc" secondAttribute="trailing" id="Ghu-Vs-tzN"/>
+                <constraint firstItem="v5r-fU-NFe" firstAttribute="top" secondItem="85q-VL-TNi" secondAttribute="top" id="Piu-ac-OWt"/>
+                <constraint firstItem="gqa-8X-RFE" firstAttribute="leading" secondItem="85q-VL-TNi" secondAttribute="leading" id="Qyg-5r-vbr"/>
+                <constraint firstItem="5wy-Cv-9iR" firstAttribute="trailing" secondItem="w0A-yq-iCc" secondAttribute="trailing" id="Sht-7y-Vx1"/>
+                <constraint firstAttribute="trailing" secondItem="RIj-M9-d1G" secondAttribute="trailing" id="TrV-Lq-LJH"/>
+                <constraint firstItem="5wy-Cv-9iR" firstAttribute="top" secondItem="85q-VL-TNi" secondAttribute="top" id="Yjy-Wv-wIq"/>
+                <constraint firstItem="BM4-xf-GMo" firstAttribute="leading" secondItem="w0A-yq-iCc" secondAttribute="leading" constant="10" id="foa-Uc-t8C"/>
+                <constraint firstItem="gqa-8X-RFE" firstAttribute="bottom" secondItem="w0A-yq-iCc" secondAttribute="bottom" id="fw3-fa-Dgk"/>
+                <constraint firstItem="WZU-48-mMT" firstAttribute="top" secondItem="w0A-yq-iCc" secondAttribute="top" id="mJ7-7L-4Bb"/>
+                <constraint firstAttribute="bottom" secondItem="v5r-fU-NFe" secondAttribute="bottom" id="qyK-oQ-Y7z"/>
+                <constraint firstAttribute="trailing" secondItem="gqa-8X-RFE" secondAttribute="trailing" id="qzY-Nc-dBG"/>
+                <constraint firstItem="RIj-M9-d1G" firstAttribute="top" secondItem="w0A-yq-iCc" secondAttribute="top" id="rkZ-a9-dup"/>
+                <constraint firstAttribute="bottom" secondItem="5wy-Cv-9iR" secondAttribute="bottom" id="u8F-YR-bcc"/>
+                <constraint firstItem="RIj-M9-d1G" firstAttribute="leading" secondItem="85q-VL-TNi" secondAttribute="leading" id="xCC-Yv-a1w"/>
+                <constraint firstItem="WZU-48-mMT" firstAttribute="bottom" secondItem="w0A-yq-iCc" secondAttribute="bottom" id="yYR-km-LtX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="w0A-yq-iCc"/>
+            <point key="canvasLocation" x="140" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="add_icon" width="15" height="15"/>
+        <image name="picker_line" width="1" height="1"/>
+        <image name="vertical_line" width="1" height="1"/>
+    </resources>
+</document>
